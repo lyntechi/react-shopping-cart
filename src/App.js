@@ -11,12 +11,16 @@ import ShoppingCart from './components/ShoppingCart';
 function App() {
 	const [products] = useState(data);
 	const [cart, setCart] = useState([]);
+	const [count , setCount]=useState(0);
 
 	const addItem = item => {
 		// add the given item to the cart
 		setCart(item)
 		
 	};
+	const adder = ()=>{
+	 setCart(cart + 1)
+	}
 	console.log(cart)
 	return (
 		<div className="App">
